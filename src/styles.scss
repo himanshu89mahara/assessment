@@ -1,12 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+$base-font-size: 16px;
+$color-red: #ef4650;
+$color-black:#010101;
+$layout-padding-lr:5vw;
+$layout-padding-tb:2vh;
+
+
 *{
     padding:0px;
     margin:0px;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size:$base-font-size;
+}
+
+h1{
+    font-size:2rem;
+}
+
+p{
+    font-size:1rem;
 }
 
 .container{
     padding:0px 20px;
+}
+
+main{
+    padding:$layout-padding-tb $layout-padding-lr;
 }
 
 .heading{
@@ -23,5 +49,7 @@ img{
     border-radius: 15px;
     border: 1px solid #000;
 }
+
+
 
 
