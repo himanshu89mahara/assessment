@@ -1,0 +1,16 @@
+<article class="timer-input">
+    <div class="form-group">
+        <label>Enter Timer Limit</label>
+        <input type="text" class="form-control" #newTimerCount/>
+    </div>
+    <div class="form-group">
+        <label></label>
+        <div>
+            <button (click)="changeStatus(+newTimerCount.value)"> {{ (countDownTimer.status===-1)?'Start/Paused':(countDownTimer.status===1)?'Pause':'Start'}}</button>
+            <button (click)="reset()">Reset</button>
+        </div>
+    </div>
+    <section class="timer-event-log">
+        <div *ngFor="let eventLog of countDownTimer.eventTrackLogs; let i = index">{{eventLog}}</div>
+    </section>
+</article>

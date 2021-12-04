@@ -1,0 +1,20 @@
+<h1 class="heading">Timer(V1)</h1>
+
+<article class="timer-wrapper">
+    <div class="row">
+        <section class="bordered">
+            <app-count-down-timer-display [timer]="countDownTimer.countDown"></app-count-down-timer-display>
+        </section>
+        <section class="bordered">
+            <app-count-down-timer-input (afterChangeTimer)="getTimerData($event)"></app-count-down-timer-input>
+        </section>
+    </div>
+    <div class="row">
+        <section class="count-down-timer">
+            <app-count-down-timer-log [timerLogs]="countDownTimer.logs"></app-count-down-timer-log>
+        </section>
+        <section class="count-down-timer">
+            <app-count-down-timer-counter [startCounter]="countDownTimer.startedCounter" [pausedCounter]="countDownTimer.pausedCounter"></app-count-down-timer-counter>
+        </section>
+    </div>
+</article>

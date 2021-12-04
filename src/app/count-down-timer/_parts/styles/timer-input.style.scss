@@ -1,0 +1,16 @@
+.timer-input{
+    min-width: 350px;
+    padding:40px;
+    .form-group{
+        padding: 10px 0px;
+        display:flex;
+        label{
+            padding:0px 5px;
+            min-width:120px;
+            float:left;
+        }
+        button{
+            margin-right:5px;
+        }
+    }
+}

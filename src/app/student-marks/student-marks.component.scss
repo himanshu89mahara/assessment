@@ -1,0 +1,37 @@
+.heading{
+    padding:10px 0px;
+}
+
+.table{
+    th,tr{
+        min-width: 100px;
+        padding: 5px 2px;
+        text-align: left;
+    }
+
+    th.sort{
+        position: relative;
+        &:after{
+            position: absolute;
+            right: 10px;
+            content: "\f0dc";
+            font-family: "FontAwesome";
+            color: #c5c1c1;
+            font-size: 15px;
+            top: 8px;
+        }
+
+        &.sort-asc{
+            &:after{
+                content:"\f0de";
+                color:#000;
+            }
+        }
+        &.sort-desc{
+            &:after{
+                content:"\f0dd";
+                color:#000;
+            }
+        }
+    }
+}

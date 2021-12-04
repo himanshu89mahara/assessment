@@ -1,0 +1,30 @@
+<h1 class="heading">Student Marks</h1>
+    
+<div class="container">
+    <table class="table table-bordred">
+        <thead>
+            <tr [appSort]="getSort" (afterSelectSort)="updateSort($event)">
+                <th class="sort" data-sort="student" >Name</th>
+                <th class="sort" data-sort="studentClass">Class</th>
+                <th class="sort" data-sort="studentSection" >Section</th>
+                <th class="sort" data-sort="math" >Math</th>
+                <th class="sort" data-sort="science">Science</th>
+                <th class="sort" data-sort="english">English</th>
+                <th class="sort" data-sort="hindi">Hindi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let _studentMark of studentMarks|sort:sort.name:sort.direction; let i = index">
+                <td>{{_studentMark.student}}</td>
+                <td>{{_studentMark.studentClass}}</td>
+                <td>{{_studentMark.studentSection}}</td>
+                <td>{{_studentMark.math}}</td>
+                <td>{{_studentMark.science}}</td>
+                <td>{{_studentMark.english}}</td>
+                <td>{{_studentMark.hindi}}</td>
+            </tr>
+        </tbody>
+        
+
+    </table>
+</div>
