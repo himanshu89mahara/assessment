@@ -1,3 +1,4 @@
+@import '../../../assets/scss/variables';
 header{
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
     padding:20px 0px;
@@ -19,27 +20,26 @@ header{
             list-style: none;
             li{
                 display: inline-block;
-                padding:0px 15px;
                 position: relative;
+                transition: .5s ease-in;
+                margin-right:2px;
                 a{
                     color:#000;
                     font-size: 16px;
                     text-decoration: none;
+                    display: block;
+                    padding:10px 15px;
+                
                 }
 
-                // &.active{
-                //     color:red;
+                &.active{
+                    background:$background-color-red-light;
+                }
 
-                   
+                &:hover{
+                    background:$background-color-red-light;
                     
-                // }
-
-                // &::before{
-                //     position: absolute;
-                //         bottom:0;
-                //         border-bottom: 1px solid #000;
-
-                // }
+                }
             }
         }
         
@@ -57,10 +57,10 @@ header{
     
     .menu-bar-responsive{
         display: none;
-        font-size: 20px;
-        float: left;
+        font-size: 1.8rem;
         position: absolute;
         top: 16px;
+        right:20px;
     }
 
 }
@@ -73,34 +73,37 @@ header{
         }
         .menu-bar-responsive{
              display: block;
-             
-         }
+        }
 
          .main-menu{
             display: block;
             position: fixed;
             top: 0;
             bottom: 0;
-            left:-300px;
-            background: rgb(218, 191, 191);
-            transition: left 0.7s cubic-bezier(0.32, 0.01, 0, 1);
+            right:-300px;
+            background: #fff;
+            transition: right 0.7s cubic-bezier(0.32, 0.01, 0, 1);
+            box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 5%);
+            z-index: 1;
             // transition: width 2s linear 1s;
             // width:0px;
 
             .navbar{
-                padding:40px 0px;
+                margin  :40px 0px;
                 min-width: 250px;
 
                 .navbar-nav{
                     li{
                         display: block;
-                        padding:15px;
+                        a{
+                            padding:15px;
+                        }
                     }
                 }
                 .btn-close{
                    display: inline-block;
                    position: absolute;
-                   right: 0;
+                   left: 0;
                    top: 0;
                    padding: 10px;
                 }
@@ -109,14 +112,9 @@ header{
             
 
          }
-         .main-menu.responsive{
-              left:0px;
-            
-
-             
-            
-             
-         }
+        .main-menu.responsive{
+              right:0px;
+        }
  
  
     }

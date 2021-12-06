@@ -1,0 +1,27 @@
+h1{
+    font-size: $heading1-font-size;
+}
+
+.heading{
+    @extend h1;
+    @each $level, $padding in $heading-padding{
+        @if $level == "1"{
+            padding:$padding;
+        }
+    }
+}
+
+
+p{
+    font-size:$pargraph1-font-size;
+}
+
+
+@media only screen and (max-width:768px){
+    h1,.heading{
+        font-size: 1.5rem;
+    }
+    // p{
+    //     font-size: 0.8rem;
+    // }
+}

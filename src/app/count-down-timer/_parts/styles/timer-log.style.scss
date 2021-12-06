@@ -1,4 +1,11 @@
 .count-down-timer-log{
-    min-width: 400px;
+    min-width: 40vw;
     padding: 20px;
+    height: 118px;
+    overflow: scroll;
+}
+
+@media only screen and (max-width:768px) {
+    
+    
 }

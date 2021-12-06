@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:'dynamic-div',loadChildren: () => import('./dynamic-div/dynamic-div.module').then(m=>m.DynamicDivModule)},
   {path:'ecommerce',loadChildren: () => import('./ecommerce/ecommerce.module').then(m=>m.EcommerceModule)},
   {path:'route-5',loadChildren: () => import('./route5/route5.module').then(m=>m.Route5Module)},
+  {path:'**',redirectTo:'banner'},
 
 ];
 

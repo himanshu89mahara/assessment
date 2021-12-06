@@ -1,27 +1,31 @@
 <h1 class="heading">Route 5 (Table with sorting)</h1>
     
 <div class="container">
-    <table class="table table-bordred">
-        <thead>
-            <tr [appSort]="getSort" (afterSelectSort)="updateSort($event)">
-                <th class="sort" data-sort="name" >Name</th>
-                <th class="sort" data-sort="username">Username</th>
-                <th class="sort" data-sort="email" >Email</th>
-                <th class="sort" data-sort="phone" >Phone</th>
-                <th class="sort" data-sort="website">Website</th>
-               </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let _user of users|async|sort:sort.name:sort.direction let i = index">
-                <td>{{_user.name}}</td>
-                <td>{{_user.username}}</td>
-                <td>{{_user.email}}</td>
-                <td>{{_user.phone}}</td>
-                <td>{{_user.website}}</td>
-                <td></td>
-            </tr>
-        </tbody>
-        
+    <div class="table-container">
+        <table class="table table-bordred">
+            <thead>
+                <tr [appSort]="getSort" (afterSelectSort)="updateSort($event)">
+                    <th class="sort" data-sort="name" >Name</th>
+                    <th class="sort" data-sort="username">Username</th>
+                    <th class="sort" data-sort="email" >Email</th>
+                    <th class="sort" data-sort="phone" >Phone</th>
+                    <th class="sort" data-sort="website">Website</th>
+                   </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let _user of users|async|sort:sort.name:sort.direction let i = index">
+                    <td>{{_user.name}}</td>
+                    <td>{{_user.username}}</td>
+                    <td>{{_user.email}}</td>
+                    <td>{{_user.phone}}</td>
+                    <td>{{_user.website}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            
+    
+        </table>
 
-    </table>
+    </div>
+    
 </div>

@@ -1,7 +1,7 @@
 .timer-display{
     display:flex;
     min-width: 400px;
-    min-height: 260px;
+    min-height: 300px;
     justify-content: center;
     align-items: center;
 
@@ -18,4 +18,12 @@
         margin: 0;
         font-weight: bold;
     }
+}
+
+@media only screen and (max-width:768px) {
+    .timer-display{
+        min-width: 85vw;
+        padding:70px;
+    }
+    
 }
