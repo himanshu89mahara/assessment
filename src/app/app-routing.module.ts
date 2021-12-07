@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './shared/error/error.component';
 
 const routes: Routes = [
   {path:'banner',loadChildren: () => import('./banner/banner.module').then(m=>m.BannerModule)},
@@ -7,7 +8,8 @@ const routes: Routes = [
   {path:'dynamic-div',loadChildren: () => import('./dynamic-div/dynamic-div.module').then(m=>m.DynamicDivModule)},
   {path:'ecommerce',loadChildren: () => import('./ecommerce/ecommerce.module').then(m=>m.EcommerceModule)},
   {path:'route-5',loadChildren: () => import('./route5/route5.module').then(m=>m.Route5Module)},
-  {path:'**',redirectTo:'banner'},
+  {path:'',redirectTo:'banner',pathMatch:'full'},
+  {path:'**',component:ErrorComponent},
 
 ];
 

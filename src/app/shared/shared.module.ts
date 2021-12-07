@@ -4,6 +4,7 @@ import { SortPipe } from './pipes/sort.pipe';
 import { SortDirective } from './directives/sort.directive';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     SortPipe,
     SortDirective,
-    HeaderComponent
+    HeaderComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   exports:[
     SortPipe,
     SortDirective,
-    HeaderComponent
+    HeaderComponent,
+    ErrorComponent
   ]
 })
 export class SharedModule { }
