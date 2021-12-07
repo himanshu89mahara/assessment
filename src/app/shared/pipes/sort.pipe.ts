@@ -40,15 +40,10 @@ export class SortPipe implements PipeTransform {
         (a:any,b:any)=>{
           if(typeof a[column] === 'string'){
             return (a[column].toUpperCase() > b[column].toUpperCase())?-1:1;
-          }else{
-            return b[column]-a[column];
-          }  
-          
-          
+          }
           return b[column]-a[column];
         }
      )
     ]
   }
-
 }

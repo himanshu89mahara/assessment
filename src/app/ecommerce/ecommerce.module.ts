@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EcommerceComponent } from './ecommerce.component';
 import { EcommerceRoutingModule } from './ecommerce-routing.module';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './_parts/list/filter.component';
@@ -13,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    EcommerceComponent,
     FilterComponent,
     ProductComponent,
     ProductListComponent

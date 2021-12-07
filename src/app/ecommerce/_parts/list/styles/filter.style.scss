@@ -1,0 +1,40 @@
+.filters{
+    list-style: none;
+    display:flex;
+    align-items:center;
+    &>li{
+        display: inline-block;
+        padding:0px 0.5vw;
+
+        a{
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .list-view{
+         
+          //padding: 5px 10px;
+          //border: 1px solid #000;
+          ul{
+            padding:0;
+            li{
+              display: inline-block;
+              padding: 0px 5px;
+            }
+          }
+        }
+    }
+
+    select{
+        min-width: 160px;
+    }
+  }
+
+  @media only screen and (max-width:320px){
+    .filters{
+      flex-wrap:wrap;
+      &>li{
+        padding:10px 5px;
+      }
+    }
+  }

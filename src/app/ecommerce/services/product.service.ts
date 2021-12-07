@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product2 } from '../models/product.model';
+import { Product } from '../models/product.model';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ProductService {
   constructor(private http:HttpClient) { }
 
   productList(){
-    return this.http.get<Product2[]>('http://fakestoreapi.com/products');
+    return this.http.get<Product[]>('http://fakestoreapi.com/products');
 
   }
 }

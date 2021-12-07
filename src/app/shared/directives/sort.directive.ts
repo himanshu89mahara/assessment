@@ -23,7 +23,6 @@ export class SortDirective {
         th.parentNode?.querySelectorAll('.sort').forEach((element)=>{
           element.classList.remove('sort-asc');
           element.classList.remove('sort-desc');
-
         });
 
 
@@ -39,7 +38,6 @@ export class SortDirective {
             default:
               this.appSort.direction = 'asc';
               direction = 'sort-asc';
-
         }
         if(direction){
           th.classList.add(direction);

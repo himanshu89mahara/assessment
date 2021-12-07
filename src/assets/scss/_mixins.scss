@@ -1,0 +1,23 @@
+@mixin box{
+    padding:9px 14px;
+}
+@mixin control-box {
+    @include box();
+    border: 1px solid $color-black;
+    border-radius: 2px;
+}
+
+@mixin control-label{
+    @include control-box();
+    border:none;
+    border-radius: none;
+}
+@mixin padding-top-down($padding-top, $padding-right, $padding-bottom, $padding-left){
+    @if $padding-top == $padding-right == $padding-bottom == $padding-left{
+        padding:$padding-top;
+    }
+    @else{
+        padding: $padding-top $padding-right $padding-bottom $padding-left;
+    }
+    
+}

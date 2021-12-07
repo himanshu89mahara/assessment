@@ -1,0 +1,17 @@
+<article  [tabindex]="index+10" [class]="listClass">
+    <div class="product">
+      <div class="image">
+        <img [src]="product.image" [alt]="product.title" />
+      </div>
+      <div class="description">
+        <ul>
+          <li>
+            <h4 class="product-heading">{{product.title}}</h4>
+          </li>
+          <li>
+              <p class="price">$ {{product.price}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>

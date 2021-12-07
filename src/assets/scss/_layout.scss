@@ -1,0 +1,28 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size:$base-font-size;
+}
+a{
+    outline: none;
+}
+
+.container{
+    padding:0px 20px;
+}
+
+main{
+    padding:$layout-padding-tb $layout-padding-lr;
+}
+
+.row{
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

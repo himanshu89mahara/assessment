@@ -1,37 +1,31 @@
-<h1 class="Heading">Route 2(Ecommerce)</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="pull-right">
-                <app-filter (afterSelectViewType)="viewType = $event" (afterSelectPriceDirection)="priceDir = $event"></app-filter>
-            </div>
-        </div>
+<div class="row flex-justify-space-between">
+    <h1 class="heading">Route 2(Ecommerce)</h1>
+    <div class="">
+        <app-filter [viewType] = "viewType" (afterSelectViewType)="viewType = $event" (afterSelectPriceDirection)="priceDir = $event"></app-filter>
     </div>
-
-    <div class="row product-list">
-        <app-product
-        [listClass]="viewType==='grid'?'col-3':'col-2'"
-        *ngFor="let _product of products$|async| sort:'price':priceDir; let i = index"
-        [product] ="_product"
-        ></app-product>
-    </div>
-
-    
-
-    <!-- <ng-container *ngFor="let _product of products| productListFilter:priceDir; let i = index">
-        <div class="product-list" *ngIf="((i==0) || i%4==0) else singleProductTemplate" >
-            <div>{{_product.name}}</div>
-            
-        </div>
-      
-    </ng-container>
-
-    <ng-template #singleProductTemplate>
-        <div>ELE BLOCK</div>
-    </ng-template> -->
-   
-
-
-
-   
 </div>
+
+<section class="product-list">
+    <app-product
+    [listClass]="viewType==='grid'?'col-3':'col-2'"
+    *ngFor="let _product of products$|async| sort:'price':priceDir; let i = index"
+    [product] ="_product" [index]="i"
+    ></app-product>
+</section>
+
+<section class="product-loader" *ngIf="inProgress">
+    <div class="loader">
+        <img src="../../../assets/icons/loading.gif"  />
+        <h3>Please wait....</h3>
+    </div>
+</section>
+
+<section class="product-loader" *ngIf="inError">
+    <div class="loader">
+        <h3>Error</h3>
+        <p>Something went wrong.</p>
+        <p>Error: {{errorMessage}}</p>
+    </div>
+</section>
+
+

@@ -1,11 +1,12 @@
 .timer-input{
     min-width: 350px;
+    min-height: 300px;
     padding:40px;
     .form-group{
         padding: 10px 0px;
         display:flex;
         label{
-            padding:0px 5px;
+            // padding:0px 5px;
             min-width:120px;
             float:left;
         }
@@ -13,4 +14,30 @@
             margin-right:5px;
         }
     }
+
+    .timer-event-log {
+        padding: 0vh 2vw;
+        /* float: right; */
+        max-height: 94px;
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .timer-input{
+        min-width: 85vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    
+    
+}
+
+@media only screen and (max-width:425px) {
+    .timer-input{
+        padding:1vmin;
+    }
+    
 }
