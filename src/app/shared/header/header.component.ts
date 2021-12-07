@@ -28,12 +28,6 @@ export class HeaderComponent implements OnInit {
       }else{
         event.stopPropagation();
       }
-    }else{
-      
     }
-
-    
-
   }
-
 }

@@ -14,7 +14,6 @@ header{
         text-align: center;
     }
 
-
     .navbar{
         ul{
             list-style: none;
@@ -50,11 +49,9 @@ header{
         .btn-close{
             display: none;
             font-size: 20px;
-
         }
     }
 
-    
     .menu-bar-responsive{
         display: none;
         font-size: 1.8rem;
@@ -62,7 +59,6 @@ header{
         top: 16px;
         right:20px;
     }
-
 }
 
 @media only screen and (max-width:768px) {
@@ -75,7 +71,7 @@ header{
              display: block;
         }
 
-         .main-menu{
+        .main-menu{
             display: block;
             position: fixed;
             top: 0;
@@ -85,9 +81,7 @@ header{
             transition: right 0.7s cubic-bezier(0.32, 0.01, 0, 1);
             box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 5%);
             z-index: 1;
-            // transition: width 2s linear 1s;
-            // width:0px;
-
+        
             .navbar{
                 margin  :40px 0px;
                 min-width: 250px;
@@ -108,16 +102,9 @@ header{
                    padding: 10px;
                 }
             }
-             
-            
-
-         }
+        }
         .main-menu.responsive{
               right:0px;
         }
- 
- 
     }
-    
-     
- }
+}

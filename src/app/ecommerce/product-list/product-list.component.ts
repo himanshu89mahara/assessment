@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { catchError, delay, Observable, of, tap } from 'rxjs';
-import { Product, initialProducts, Product2 } from '../models/product.model';
+import { Product } from '../models/product.model';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { ProductService } from '../services/product.service';
   providers:[ProductService]
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = initialProducts();
-  products$: Observable<Product2[]> | undefined;
+  //products: Product[] = initialProducts();
+  products$: Observable<Product[]> | undefined;
   viewType='grid';
   priceDir:string = 'asc';
   inProgress:Boolean = true;
