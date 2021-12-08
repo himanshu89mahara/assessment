@@ -1,5 +1,5 @@
 @mixin box{
-    padding:9px 14px;
+    padding:0.2rem 0.3rem;
 }
 @mixin control-box {
     @include box();
